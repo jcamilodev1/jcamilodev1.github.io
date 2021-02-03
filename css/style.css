@@ -60,7 +60,7 @@ html{
   display: grid;
   max-width: 700px;
   min-width: 300px;
-  height: auto;
+  height: 100vh;
   margin: 0 auto;
   justify-items: center;
 }
@@ -181,9 +181,9 @@ html{
     position: relative;
   }
   .main__container_text{
-    font-size: 2em;
+    font-size: 1.8em;
     position: relative;
-    top:-50px
+    top:-100px
   }  
   .main__container_text h1{
     font-size: 2em;

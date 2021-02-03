@@ -12,12 +12,17 @@
 html{
   font-size: 62.5%;
   font-family: 'Roboto Slab', serif;
+  scroll-behavior: smooth;
 }
 .header{
   height: 80px;
   padding: 20px;
   color: var(--color_blanco);
   background-color: var(--color_principal);
+  
+}
+.header__logo h2{
+  font-size: 2em;
 }
 .header__container{
   display: flex;
@@ -26,11 +31,14 @@ html{
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  padding-right: 30px;
+  
 }
 .header__links{
   display: flex;
   width: 300px;
   justify-content: space-between;
+  
 }
 .header__links a{
   color: var(--color_blanco);
@@ -120,7 +128,7 @@ html{
   color: white;
   border-radius: 20px;
   text-decoration: none;
-  background-color:var(--color_secundario);
+  background-color: var(--color_secundario);
   margin-top: 10px;
   box-shadow: 2px 2px 5px var(--color_oscuro_sombra);
   
@@ -159,6 +167,12 @@ html{
 }
 
 @media (min-width: 720px) {
+  .header__logo h2{
+    font-size: 2em;
+  }
+  .header__links{
+    font-size: 1em;
+  }
   .header__container{
     font-size: 1.5em;
   }
@@ -185,5 +199,63 @@ html{
   }
 .proyectos__container-proyecto{
   margin: 10px;
+  }
+}
+
+
+#check{
+  display: none;
+}
+
+@media (max-width: 500px){
+
+  .container {
+    display: inline-block;
+    cursor: pointer;
+  }
+  .header__links{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color_secundario);
+    color: white;
+    top:80px;
+    left: -100%;
+    font-size: 2em;
+    transition: all .5s;
+  }
+
+  #check:checked ~ .header__links{
+    left: 0;
+  }
+  .header__links a{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 50px 10px;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--color_blanco);
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+  
+  .checkbtn{
+    color:white
   }
 }

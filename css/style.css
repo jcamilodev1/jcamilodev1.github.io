@@ -19,7 +19,9 @@ html{
   padding: 20px;
   color: var(--color_blanco);
   background-color: var(--color_principal);
-  
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px
 }
 .header__logo h2{
   font-size: 2em;
@@ -52,12 +54,12 @@ html{
   width: auto;
   background-color: var(--color_principal);
   margin-bottom: 10px;
-  padding: 30px;
+  padding: 30px 10px;
 }
 .main__container{
   display: grid;
   max-width: 700px;
-  min-width: 320px;
+  min-width: 300px;
   height: auto;
   margin: 0 auto;
   justify-items: center;
@@ -146,7 +148,6 @@ html{
 .container__redes{
   display: grid;
   max-width: 700px;
-  min-width: 320px;
   height: auto;
   margin: 0 auto;
   color: var(--color_blanco);
@@ -157,7 +158,7 @@ html{
 }
 .container__redes-logos{
   display: flex;
-  width: 100%;
+  width: auto;
   justify-content: space-around;
   margin-top: 20px;
 }
@@ -224,6 +225,9 @@ html{
     left: -100%;
     font-size: 2em;
     transition: all .5s;
+  }
+  .header{
+    overflow: hidden;
   }
 
   #check:checked ~ .header__links{
